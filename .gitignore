@@ -1,6 +1,15 @@
 # Your answers — personal, and specific to your SUNet ID.
 site.conf
+site.conf.*
 .deploy.conf
+.deploy.conf.*
+
+# Credentials — never commit these.
+.env
+*.pem
+*.key
+id_rsa*
+id_ed25519*
 
 # Generated output.
 WWW/
