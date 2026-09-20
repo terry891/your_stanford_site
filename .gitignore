@@ -1,0 +1,14 @@
+# Your answers — personal, and specific to your SUNet ID.
+site.conf
+.deploy.conf
+
+# Generated output.
+WWW/
+
+# Your photo.
+templates/img/*
+!templates/img/.gitkeep
+
+__pycache__/
+*.pyc
+.DS_Store

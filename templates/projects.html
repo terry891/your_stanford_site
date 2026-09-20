@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects &middot; {{NAME}}</title>
+<meta name="description" content="Projects and coursework by {{NAME}}.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%238C1515'/><text x='50' y='54' font-family='Georgia,serif' font-size='44' fill='white' text-anchor='middle' dominant-baseline='central'>{{INITIALS}}</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+<script>
+(function(){var d=document.documentElement;d.classList.remove("no-js");var t;
+try{t=localStorage.getItem("theme");}catch(e){}
+if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="progress" aria-hidden="true"></div>
+
+{{> _header.html}}
+
+<main id="main">
+<section id="top">
+  <div class="wrap">
+    <p class="eyebrow reveal">Archive</p>
+    <h1 class="reveal" style="font-size:clamp(2.2rem,1.4rem+3vw,3.6rem)">Projects</h1>
+    <p class="lede reveal">Everything worth showing, newest first. For each one: the problem, what I did, and what actually happened.</p>
+
+    <div class="filters reveal">
+      <button class="filter" data-filter="all" aria-pressed="true" type="button">All</button>
+      <button class="filter" data-filter="systems" aria-pressed="false" type="button">Systems</button>
+      <button class="filter" data-filter="ml" aria-pressed="false" type="button">Machine learning</button>
+      <button class="filter" data-filter="web" aria-pressed="false" type="button">Web</button>
+      <button class="filter" data-filter="coursework" aria-pressed="false" type="button">Coursework</button>
+    </div>
+
+    <div class="grid">
+      <article class="card reveal" data-tags="systems">
+        <div class="card-top"><h3><a href="#">Distributed key-value store</a></h3><span class="card-year">2027</span></div>
+        <p>A replicated store with leader election and log compaction. Sustained 12k writes per second across five nodes.</p>
+        <ul class="tags"><li>Go</li><li>Raft</li></ul>
+      </article>
+      <article class="card reveal" data-delay="60" data-tags="ml">
+        <div class="card-top"><h3><a href="#">Sequence model for protein folding</a></h3><span class="card-year">2027</span></div>
+        <p>Course project that beat the provided baseline by nine points on the held-out set.</p>
+        <ul class="tags"><li>PyTorch</li><li>Transformers</li></ul>
+      </article>
+      <article class="card reveal" data-delay="120" data-tags="web">
+        <div class="card-top"><h3><a href="#">Course planner for Stanford</a></h3><span class="card-year">2026</span></div>
+        <p>A scheduling tool that checks prerequisites and time conflicts. Used by about 300 students.</p>
+        <ul class="tags"><li>TypeScript</li><li>React</li></ul>
+      </article>
+      <article class="card reveal" data-tags="systems,coursework">
+        <div class="card-top"><h3><a href="#">Virtual memory allocator</a></h3><span class="card-year">2026</span></div>
+        <p>A custom heap allocator built for a systems course. Reached 84 percent utilisation on the grading traces.</p>
+        <ul class="tags"><li>C</li><li>CS 107</li></ul>
+      </article>
+      <article class="card reveal" data-delay="60" data-tags="ml,coursework">
+        <div class="card-top"><h3><a href="#">Reinforcement learning for traffic lights</a></h3><span class="card-year">2026</span></div>
+        <p>Cut mean vehicle wait time by a third against a fixed-timer baseline in simulation.</p>
+        <ul class="tags"><li>Python</li><li>Gym</li></ul>
+      </article>
+      <article class="card reveal" data-delay="120" data-tags="web">
+        <div class="card-top"><h3><a href="#">This website</a></h3><span class="card-year">2026</span></div>
+        <p>Static, dependency-free, and deployed to Stanford AFS with a single command.</p>
+        <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+      </article>
+    </div>
+
+    <div class="btn-row"><a class="btn btn-ghost" href="index.html">Back to home</a></div>
+  </div>
+</section>
+</main>
+
+{{> _footer.html}}
+</body>
+</html>

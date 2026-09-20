@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{NAME}} &middot; Stanford University</title>
+<meta name="description" content="{{ROLE}} at Stanford University. {{BIO}}">
+<meta property="og:title" content="{{NAME}}">
+<meta property="og:description" content="{{ROLE}} at Stanford University.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="{{SITE_URL}}">
+<link rel="canonical" href="{{SITE_URL}}">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%238C1515'/><text x='50' y='54' font-family='Georgia,serif' font-size='44' fill='white' text-anchor='middle' dominant-baseline='central'>{{INITIALS}}</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+<script>
+(function(){var d=document.documentElement;d.classList.remove("no-js");var t;
+try{t=localStorage.getItem("theme");}catch(e){}
+if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="progress" aria-hidden="true"></div>
+
+{{> _header.html}}
+
+<main id="main">
+
+<section class="hero tone-deep" id="top">
+  <div class="hero-mesh" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge"><span class="dot"></span>{{STATUS}}</span>
+      <h1>{{NAME}}</h1>
+      <p class="hero-role">{{ROLE}}</p>
+      <p class="hero-bio">{{BIO}}</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#projects">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          See my work
+        </a>
+        <a class="btn btn-ghost" href="cv.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8zM14 3v5h5M9 13h6M9 17h4"/></svg>
+          Read my CV
+        </a>
+      </div>
+    </div>
+    <div class="portrait-frame">
+      {{#IF HAS_PHOTO}}<img class="portrait" data-parallax src="img/{{PHOTO_FILE}}" alt="Portrait of {{NAME}}" width="240" height="240">{{/IF}}
+      {{#IF NO_PHOTO}}<div class="portrait monogram" data-parallax role="img" aria-label="{{NAME}}">{{INITIALS}}</div>{{/IF}}
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">Scroll<span></span></div>
+</section>
+
+<section class="pin" id="about" data-pin>
+  <div class="pin-stage">
+    <div class="wrap">
+      <p class="eyebrow">About</p>
+      <div class="pin-panels">
+        <div class="pin-panel is-on">
+          <div>
+            <p class="pin-say">I came to Stanford to work on problems that are easier to describe than to solve.</p>
+            <p class="pin-note">Studying computer science, with a bias toward the parts you can measure.</p>
+          </div>
+          <span class="pin-num" aria-hidden="true">01</span>
+        </div>
+        <div class="pin-panel">
+          <div>
+            <p class="pin-say">Most of what I build starts as a small annoyance and turns into a weekend that got out of hand.</p>
+            <p class="pin-note">Usually systems work: storage, schedulers, and the occasional compiler detour.</p>
+          </div>
+          <span class="pin-num" aria-hidden="true">02</span>
+        </div>
+        <div class="pin-panel">
+          <div>
+            <p class="pin-say">Right now I am looking for a research group and people who like arguing about systems design.</p>
+            <p class="pin-note">If that sounds like your lab, the contact section is three scrolls away.</p>
+          </div>
+          <span class="pin-num" aria-hidden="true">03</span>
+        </div>
+      </div>
+      <div class="pin-index" aria-hidden="true"><i class="is-on"></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="numbers">
+  <div class="wrap">
+    <p class="eyebrow reveal">By the numbers</p>
+    <h2 class="reveal">A quick snapshot</h2>
+    <div class="stats">
+      <div class="stat reveal"><b data-count="12">0</b><span>Courses completed</span></div>
+      <div class="stat reveal" data-delay="80"><b data-count="7">0</b><span>Projects shipped</span></div>
+      <div class="stat reveal" data-delay="160"><b data-count="3">0</b><span>Research groups</span></div>
+      <div class="stat reveal" data-delay="240"><b data-count="4" data-suffix="k">0</b><span>Lines of Rust this quarter</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <p class="eyebrow reveal">Experience</p>
+    <h2 class="reveal">Where I have been</h2>
+    <ul class="timeline">
+      <li class="reveal">
+        <div class="tl-head"><strong>B.S. Computer Science</strong><span class="tl-when">2026 &ndash; 2030</span></div>
+        <div class="tl-org">Stanford University</div>
+        <p>Coursework in algorithms, computer systems, linear algebra, and probability.</p>
+      </li>
+      <li class="reveal" data-delay="80">
+        <div class="tl-head"><strong>Undergraduate Research Assistant</strong><span class="tl-when">Summer 2027</span></div>
+        <div class="tl-org">Your Lab</div>
+        <p>One line on what you investigated and what came out of it.</p>
+      </li>
+      <li class="reveal" data-delay="160">
+        <div class="tl-head"><strong>Software Engineering Intern</strong><span class="tl-when">Summer 2028</span></div>
+        <div class="tl-org">Your Company</div>
+        <p>What you shipped, and the measurable effect it had.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="rail tone-deep" id="projects" data-rail>
+  <div class="rail-stage">
+    <div class="rail-head wrap">
+      <p class="eyebrow">Projects</p>
+      <h2>Things I have built</h2>
+    </div>
+    <div class="rail-track">
+      <article class="card">
+        <div class="card-top"><h3><a href="projects.html">Distributed key-value store</a></h3><span class="card-year">2027</span></div>
+        <p>A replicated store with leader election and log compaction. Sustained 12k writes per second across five nodes.</p>
+        <ul class="tags"><li>Go</li><li>Raft</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-top"><h3><a href="projects.html">Sequence model for protein folding</a></h3><span class="card-year">2027</span></div>
+        <p>Course project that beat the provided baseline by nine points on the held-out set.</p>
+        <ul class="tags"><li>PyTorch</li><li>Transformers</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-top"><h3><a href="projects.html">Course planner for Stanford</a></h3><span class="card-year">2026</span></div>
+        <p>A scheduling tool that checks prerequisites and time conflicts. Used by about 300 students.</p>
+        <ul class="tags"><li>TypeScript</li><li>React</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-top"><h3><a href="projects.html">Virtual memory allocator</a></h3><span class="card-year">2026</span></div>
+        <p>A custom heap allocator for a systems course. Reached 84 percent utilisation on the grading traces.</p>
+        <ul class="tags"><li>C</li><li>CS 107</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-top"><h3><a href="projects.html">This website</a></h3><span class="card-year">2026</span></div>
+        <p>Static, dependency-free, and deployed to Stanford AFS with a single command.</p>
+        <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+      </article>
+    </div>
+    <p class="rail-hint wrap">Keep scrolling &middot; <a href="projects.html">or open the full archive</a></p>
+  </div>
+</section>
+
+<section id="skills" class="section-alt">
+  <div class="wrap">
+    <p class="eyebrow reveal">Toolbox</p>
+    <h2 class="reveal">What I work with</h2>
+  </div>
+  <div class="marquee reveal" aria-label="Tools and languages">
+    <div class="marquee-track">
+      <ul class="chips"><li>Python</li><li>C++</li><li>Go</li><li>Rust</li><li>TypeScript</li><li>PyTorch</li><li>Linux</li><li>Git</li><li>SQL</li><li>Docker</li><li>LaTeX</li></ul>
+      <ul class="chips" aria-hidden="true"><li>Python</li><li>C++</li><li>Go</li><li>Rust</li><li>TypeScript</li><li>PyTorch</li><li>Linux</li><li>Git</li><li>SQL</li><li>Docker</li><li>LaTeX</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="tone-deep">
+  <div class="wrap">
+    <p class="eyebrow reveal">Contact</p>
+    <h2 class="reveal">Say hello</h2>
+    <div class="contact-box reveal">
+      <p class="muted">Email is the fastest way to reach me. I read everything and reply to most of it.</p>
+      <span class="copy-field">{{EMAIL}}
+        <button class="copy-btn" data-copy="{{EMAIL}}" type="button" aria-label="Copy email address">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+        </button>
+      </span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+{{> _footer.html}}
+</body>
+</html>

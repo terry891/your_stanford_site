@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV &middot; {{NAME}}</title>
+<meta name="description" content="Curriculum vitae of {{NAME}}, {{ROLE}} at Stanford University.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%238C1515'/><text x='50' y='54' font-family='Georgia,serif' font-size='44' fill='white' text-anchor='middle' dominant-baseline='central'>{{INITIALS}}</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+<script>
+(function(){var d=document.documentElement;d.classList.remove("no-js");var t;
+try{t=localStorage.getItem("theme");}catch(e){}
+if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";d.dataset.theme=t;})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="progress" aria-hidden="true"></div>
+
+{{> _header.html}}
+
+<main id="main">
+<section id="top">
+  <div class="wrap wrap-narrow">
+
+    <div class="cv-head reveal">
+      <div>
+        <h1 style="font-size:clamp(2.1rem,1.4rem+2.6vw,3.2rem);margin-bottom:.15em">{{NAME}}</h1>
+        <p class="hero-role" style="margin-bottom:.5em">{{ROLE}}</p>
+        <p class="cv-contact muted">
+          <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> &middot;
+          <a href="{{SITE_URL}}">web.stanford.edu/~{{SUNETID}}</a>
+        </p>
+      </div>
+      <button class="btn btn-ghost" data-print type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4v-6h16v6h-2M8 14h8v7H8z"/></svg>
+        Save as PDF
+      </button>
+    </div>
+
+    <h2 class="cv-rule reveal">Education</h2>
+    <ul class="timeline">
+      <li class="reveal">
+        <div class="tl-head"><strong>B.S. Computer Science</strong><span class="tl-when">2026 &ndash; 2030</span></div>
+        <div class="tl-org">Stanford University</div>
+        <p>Relevant coursework: algorithms, computer systems, linear algebra, probability, machine learning.</p>
+      </li>
+    </ul>
+
+    <h2 class="cv-rule reveal">Experience</h2>
+    <ul class="timeline">
+      <li class="reveal">
+        <div class="tl-head"><strong>Undergraduate Research Assistant</strong><span class="tl-when">Summer 2027</span></div>
+        <div class="tl-org">Your Lab, Stanford University</div>
+        <p>What you investigated, the method you used, and the result. One or two lines is enough.</p>
+      </li>
+      <li class="reveal" data-delay="80">
+        <div class="tl-head"><strong>Software Engineering Intern</strong><span class="tl-when">Summer 2028</span></div>
+        <div class="tl-org">Your Company</div>
+        <p>What you shipped and the measurable effect it had on users or on the system.</p>
+      </li>
+      <li class="reveal" data-delay="160">
+        <div class="tl-head"><strong>Course Assistant, CS 106B</strong><span class="tl-when">Winter 2028</span></div>
+        <div class="tl-org">Stanford University</div>
+        <p>Led weekly sections for about 25 students and graded assignments.</p>
+      </li>
+    </ul>
+
+    <h2 class="cv-rule reveal">Selected projects</h2>
+    <ul class="timeline">
+      <li class="reveal">
+        <div class="tl-head"><strong>Distributed key-value store</strong><span class="tl-when">2027</span></div>
+        <p>Replicated store with leader election and log compaction. Sustained 12k writes per second across five nodes. Written in Go.</p>
+      </li>
+      <li class="reveal" data-delay="80">
+        <div class="tl-head"><strong>Course planner for Stanford</strong><span class="tl-when">2026</span></div>
+        <p>Scheduling tool that checks prerequisites and time conflicts. Used by roughly 300 students.</p>
+      </li>
+    </ul>
+
+    <h2 class="cv-rule reveal">Skills</h2>
+    <ul class="chips reveal" style="flex-wrap:wrap">
+      <li>Python</li><li>C++</li><li>Go</li><li>Rust</li><li>TypeScript</li>
+      <li>PyTorch</li><li>Linux</li><li>Git</li><li>SQL</li><li>Docker</li><li>LaTeX</li>
+    </ul>
+
+    <h2 class="cv-rule reveal">Awards</h2>
+    <ul class="timeline">
+      <li class="reveal">
+        <div class="tl-head"><strong>Your award or scholarship</strong><span class="tl-when">2027</span></div>
+        <p>One line on what it recognised.</p>
+      </li>
+    </ul>
+
+    <div class="btn-row"><a class="btn btn-ghost" href="index.html">Back to home</a></div>
+  </div>
+</section>
+</main>
+
+{{> _footer.html}}
+</body>
+</html>
