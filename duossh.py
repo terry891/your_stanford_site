@@ -8,6 +8,9 @@ you, and then asks one question:  Enter SMS passcode:
 
 Nothing is written to disk. On success an authenticated SSH control socket is
 left open so later runs need no password at all.
+
+If DUOSSH_PASSWORD is set, it answers the first password prompt instead of
+asking. launch_it.sh uses that to pass a password straight from the OS keyring.
 """
 import argparse
 import getpass
@@ -124,6 +127,12 @@ class Session:
 
     def answer_password(self):
         self.pw_attempts += 1
+        # launch_it.sh passes a keyring password this way so it never touches
+        # a file. A wrong one falls through to the prompt on the next attempt.
+        stored = os.environ.get("DUOSSH_PASSWORD")
+        if self.pw_attempts == 1 and stored:
+            self.send(stored, secret=True)
+            return
         label = "    SUNet password: " if self.pw_attempts == 1 \
                 else f"    SUNet password (attempt {self.pw_attempts}): "
         self.send(getpass.getpass(label), secret=True)

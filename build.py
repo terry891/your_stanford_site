@@ -20,7 +20,7 @@ RE_VAR = re.compile(r"\{\{(\w+)\}\}")
 
 def load_conf(path=CONF):
     if not path.exists():
-        sys.exit(f"error: {path.name} not found. Run ./setup.sh first.")
+        sys.exit(f"error: {path.name} not found. Run ./launch_it.sh first.")
     conf = {}
     for line in path.read_text(encoding="utf-8").splitlines():
         line = line.strip()
